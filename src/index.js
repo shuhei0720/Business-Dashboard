@@ -4,11 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyTime from './MyTime';
+import {Rnd} from 'react-rnd';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyTime />
+    <Rnd
+      default={{
+        x: 0, y: 0,
+        width: 320, height: 200,
+    }}>
+      <MyTime />
+    </Rnd>
   </React.StrictMode>
 );
 
