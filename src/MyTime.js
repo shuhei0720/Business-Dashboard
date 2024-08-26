@@ -1,4 +1,5 @@
 import {format} from 'date-fns'
+import './MyTime.css'
 
 function MyTime() {
     function getTime() {
@@ -7,7 +8,7 @@ function MyTime() {
     }
 
     return (
-        <div>
+        <div className="time">
             {getTime()}
         </div>
     );
