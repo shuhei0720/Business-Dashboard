@@ -4,3 +4,11 @@
     font-size: 60px;
     font-family: "Cherry Bomb One", system-ui;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+.area {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'RocknRoll One', sans-serif;
+}

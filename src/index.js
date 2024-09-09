@@ -14,8 +14,15 @@ root.render(
         x: 0, y: 0,
         width: 320, height: 200,
     }}>
-      <MyTime />
+      <MyTime area="東京" zone="Asia/Tokyo" />
     </Rnd>
+    <Rnd
+      default={{
+        x: 320, y: 0,
+        width: 320, height: 200,
+      }}>
+        <MyTime area="ニューヨーク" zone="America/New_York" />
+      </Rnd>
   </React.StrictMode>
 );
 

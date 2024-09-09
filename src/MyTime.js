@@ -3,7 +3,7 @@ import './MyTime.css'
 import {useState, useEffect} from 'react';
 import {toZonedTime} from 'date-fns-tz';
 
-function MyTime() {
+function MyTime(props) {
     // ステートを定義
     const [now, setNow] = useState(getTime());
 
@@ -20,12 +20,13 @@ function MyTime() {
     }, []);
     function getTime() {
 //        const now = new Date();
-        const now = toZonedTime(new Date(), 'America/New_York');
+        const now = toZonedTime(new Date(), props.zone);
         return format(now, 'HH:mm:ss');
     }
 
     return (
         <div className="time">
+            <div className="area">{props.area}</div>
             {now}
         </div>
     );
