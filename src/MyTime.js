@@ -1,6 +1,7 @@
 import {format} from 'date-fns'
 import './MyTime.css'
 import {useState, useEffect} from 'react';
+import {toZonedTime} from 'date-fns-tz';
 
 function MyTime() {
     // ステートを定義
@@ -18,7 +19,8 @@ function MyTime() {
         };
     }, []);
     function getTime() {
-        const now = new Date();
+//        const now = new Date();
+        const now = toZonedTime(new Date(), 'America/New_York');
         return format(now, 'HH:mm:ss');
     }
 
