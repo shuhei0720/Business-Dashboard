@@ -1,10 +1,22 @@
 import {format} from 'date-fns'
 import './MyTime.css'
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 function MyTime() {
     // ステートを定義
     const [now, setNow] = useState(getTime());
+
+    useEffect(() => {
+        const timerid = setInterval(() => {
+            // 一定時間ごとに実行する処理
+            setNow (getTime());
+        }, 1000);
+
+        // タイマーを解放する関数を返す
+        return () => {
+            clearTimeout(timerid);
+        };
+    }, []);
     function getTime() {
         const now = new Date();
         return format(now, 'HH:mm:ss');
