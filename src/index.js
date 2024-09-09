@@ -30,7 +30,7 @@ root.render(
           x: 0, y: 200,
           width: 640, height: 200,
         }}>
-          <MyTimeGraph />
+          <MyTimeGraph start="9:00" end="18:00" />
         </Rnd>
   </React.StrictMode>
 );
