@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyTime from './MyTime';
 import {Rnd} from 'react-rnd';
+import MyTimeGraph from './MyTimeGraph';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,14 @@ root.render(
       }}>
         <MyTime area="ニューヨーク" zone="America/New_York" />
       </Rnd>
+
+      <Rnd
+        default={{
+          x: 0, y: 200,
+          width: 640, height: 200,
+        }}>
+          <MyTimeGraph />
+        </Rnd>
   </React.StrictMode>
 );
 
